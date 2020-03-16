@@ -12,4 +12,6 @@ public class ReadInput {
     public String getUserDice() {
         return  scanner.next().toUpperCase();
     }
+
+    public String getUserInput() { return scanner.next(); }
 }
