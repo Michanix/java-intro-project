@@ -1,13 +1,14 @@
 package components;
 
 import utils.Abilities;
+import utils.GameRace;
 
 public class Summoner {
     private String name;
-    private String race;
+    private GameRace race;
     private Abilities abilities;
 
-    public Summoner(String name, String race) {
+    public Summoner(String name, GameRace race) {
         this.name = name;
         this.race = race;
         this.abilities = new Abilities();
@@ -22,11 +23,11 @@ public class Summoner {
         this.name = name;
     }
 
-    public String getRace() {
+    public GameRace getRace() {
         return race;
     }
 
-    public void setRace(String race) {
+    public void setRace(GameRace race) {
         this.race = race;
     }
 
