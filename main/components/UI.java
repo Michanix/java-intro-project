@@ -1,5 +1,9 @@
 package components;
 
+/*
+* Main UI class. Here should be called every other UI component.
+*/
+
 public class UI {
     ReadInput readInput = new ReadInput();
 

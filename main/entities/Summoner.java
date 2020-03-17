@@ -1,5 +1,10 @@
 package entities;
 
+/*
+* Summoner object. Every attribute that is related to the character should be here.
+*
+*/
+
 import utils.GameRace;
 
 public class Summoner {

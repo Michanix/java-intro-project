@@ -2,6 +2,10 @@ package entities;
 
 import utils.DiceType;
 
+/*
+* Class for Summoner abilities
+*/
+
 import java.util.Arrays;
 
 public class Abilities {
