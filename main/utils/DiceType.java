@@ -16,7 +16,7 @@ public enum DiceType {
     D12("D12") {
         public int sides() { return 12; }
     },
-    D20("D4") {
+    D20("D20") {
         public int sides() { return 20; }
     };
 
