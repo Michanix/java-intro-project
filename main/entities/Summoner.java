@@ -4,6 +4,7 @@ import utils.GameRace;
 
 public class Summoner {
     private String name;
+    private int experience;
     private GameRace race;
     private Abilities abilities;
 
@@ -11,6 +12,7 @@ public class Summoner {
         this.name = name;
         this.race = race;
         this.abilities = new Abilities();
+        this.experience = 0;
     }
 
     // get and set
@@ -20,6 +22,14 @@ public class Summoner {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getExperience() {
+        return experience;
+    }
+
+    public void setExperience(int experience) {
+        this.experience = experience;
     }
 
     public GameRace getRace() {
