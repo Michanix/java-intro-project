@@ -3,6 +3,7 @@ package main;
 import components.Dice;
 import components.ReadInput;
 import components.UI;
+import utils.Abilities;
 import utils.DiceType;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,10 +11,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<DiceType> dieTypeList = new ArrayList<>(List.of(DiceType.values()));
-        UI ui = new UI();
-        ui.run();
-
-
+        Abilities abilities = new Abilities();
+        System.out.println(abilities);
         /*
         for (DiceType die: dieTypeList) {
             System.out.println(die);

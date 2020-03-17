@@ -20,10 +20,10 @@ public enum DiceType {
         public int sides() { return 20; }
     };
 
-    private String numberOfSides;
+    private String diceName;
 
-    DiceType(String numberOfSides) {
-        this.numberOfSides = numberOfSides;
+    DiceType(String diceName) {
+        this.diceName = diceName;
     }
 
     public abstract int sides();

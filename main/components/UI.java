@@ -22,7 +22,7 @@ public class UI {
 
     private void options() {
         System.out.println("[1] Start the game");
-        System.out.println("[2] Roll the dice");
+        System.out.println("[2] Create character");
         System.out.println("[3] Exit");
         System.out.print("> ");
     }
