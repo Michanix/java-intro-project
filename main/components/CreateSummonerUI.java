@@ -1,5 +1,6 @@
 package components;
 
+import entities.Summoner;
 import utils.GameRace;
 
 public class CreateSummonerUI {
