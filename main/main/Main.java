@@ -1,8 +1,6 @@
 package main;
 
-import components.Dice;
-import components.ReadInput;
-import components.UI;
+import components.*;
 import utils.Abilities;
 import utils.DiceType;
 import java.util.ArrayList;
@@ -11,8 +9,10 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<DiceType> dieTypeList = new ArrayList<>(List.of(DiceType.values()));
-        Abilities abilities = new Abilities();
-        System.out.println(abilities);
+        UI ui = new UI();
+        CreateSummonerUI createSummonerUI = new CreateSummonerUI();
+        createSummonerUI.run();
+
         /*
         for (DiceType die: dieTypeList) {
             System.out.println(die);
