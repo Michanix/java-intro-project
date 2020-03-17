@@ -11,8 +11,9 @@ public class CreateSummonerUI {
         System.out.print("> ");
         String name = userInput.getUserInput();
         GameRace race = null;
+        System.out.println("What is your race? ");
         while (race == null) {
-            System.out.println("What is your race? ");
+            System.out.println();
             raceOptions();
             String option = userInput.getUserInput();
             switch (option) {
