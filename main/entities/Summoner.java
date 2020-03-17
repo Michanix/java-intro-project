@@ -1,6 +1,5 @@
-package components;
+package entities;
 
-import utils.Abilities;
 import utils.GameRace;
 
 public class Summoner {

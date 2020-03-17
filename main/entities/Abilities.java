@@ -1,4 +1,6 @@
-package utils;
+package entities;
+
+import utils.DiceType;
 
 import java.util.Arrays;
 
