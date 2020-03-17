@@ -1,7 +1,6 @@
 package utils;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class Abilities {
     private int strength;
@@ -86,13 +85,14 @@ public class Abilities {
 
     @Override
     public String toString() {
-        return "Abilities{" +
-                "strength=" + strength +
-                ", dexterity=" + dexterity +
-                ", constitution=" + constitution +
-                ", intelligence=" + intelligence +
-                ", wisdom=" + wisdom +
-                ", charisma=" + charisma +
-                '}';
+        return String.format(
+                "[1] Strength: %d\n" +
+                "[2] Dexterity: %d\n" +
+                "[3] Constitution: %d\n"+
+                "[4] Intelligence: %d\n" +
+                "[5] Wisdom: %d\n" +
+                "[6] Charisma: %d",
+                strength, dexterity, constitution,
+                intelligence, wisdom, charisma);
     }
 }
