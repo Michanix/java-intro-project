@@ -1,6 +1,7 @@
 package components;
 
 public class UI {
+    ReadInput readInput = new ReadInput();
 
     private void greeting() {
         System.out.println("=== Welcome To the Dungeons and Dragons ===");
@@ -13,10 +14,33 @@ public class UI {
     }
 
     private void options() {
-        System.out.println("[1] Create character");
-        System.out.println("[2] Start the game");
-        System.out.println("[3] Exit");
-        System.out.print("> ");
+        while (true) {
+            System.out.println();
+            System.out.println("[1] Create character");
+            System.out.println("[2] Start the game");
+            System.out.println("[3] Exit");
+            System.out.print("> ");
+            String option = readInput.getUserInput();
+            switch (option) {
+                case "1":
+                    CreateSummonerUI createSummonerUI = new CreateSummonerUI();
+                    createSummonerUI.run();
+                    break;
+                case "2":
+                    System.out.println("Incoming...");
+                    break;
+                case "3":
+                    System.out.println("See you on the next adventure!");
+                    terminate();
+                    break;
+                default:
+                    System.err.println("Unknown option.");
+            }
+        }
+    }
+
+    private void terminate() {
+        System.exit(0);
     }
 
     public void run() {
