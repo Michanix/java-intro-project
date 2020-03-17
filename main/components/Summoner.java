@@ -2,12 +2,12 @@ package components;
 
 import utils.Abilities;
 
-public class Character {
+public class Summoner {
     private String name;
     private String race;
     private Abilities abilities;
 
-    public Character(String name, String race) {
+    public Summoner(String name, String race) {
         this.name = name;
         this.race = race;
         this.abilities = new Abilities();
