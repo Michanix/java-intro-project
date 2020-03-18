@@ -1,14 +1,9 @@
 package components.levels.firstlvl;
 
-import components.actions.ThrowDiceAction;
-import components.userinterface.DefaultLvLUI;
-import utils.DisplayText;
 import utils.ReadUserInput;
 
 public class FirstLevel {
-    private DisplayText displayText = new DisplayText();
     private ReadUserInput readUserInput = new ReadUserInput();
-    private DefaultLvLUI defaultLvLUI = new DefaultLvLUI();
 
     public FirstLevel() {
     }
@@ -39,22 +34,16 @@ public class FirstLevel {
                     break;
             }
         }
-
     }
 
     private void rightChoice() {
-        String pathToTxt = "src/main/text/lvl1/right/ancientArteFound.txt";
-        displayText.printText(pathToTxt);
+        RightTurn rightTurn = new RightTurn();
+        rightTurn.run();
     }
 
     private void leftChoice() {
-        ThrowDiceAction throwDiceAction = new ThrowDiceAction();
-        int percent = throwDiceAction.roll2D10();
-        if (percent < 30) {
-            displayText.printText("src/main/text/lvl1/left/lessThanNPercent.txt");
-        } else {
-            displayText.printText("src/main/text/lvl1/left/moreThanNPercent.txt");
-        };
+        LeftTurn leftTurn = new LeftTurn();
+        leftTurn.run();
     }
 
     public void run() {

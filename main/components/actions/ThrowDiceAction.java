@@ -1,6 +1,8 @@
 package components.actions;
+/*
+* Class to handle all the dice actions
+*/
 
-import entities.Dice;
 import utils.DiceType;
 
 public class ThrowDiceAction {

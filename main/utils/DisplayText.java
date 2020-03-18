@@ -3,7 +3,7 @@ package utils;
 import java.util.List;
 
 public class DisplayText {
-    public void printText(String path) {
+    public static void printText(String path) {
         ReadTextFile readTextFile = new ReadTextFile();
         try {
             List<String> listOfText = readTextFile.readFileToList(path);
