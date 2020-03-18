@@ -1,7 +1,7 @@
 package main;
 
 import utils.DisplayText;
-import components.UI;
+import components.userinterface.UI;
 
 public class Main {
     public static void main(String[] args) throws Exception {

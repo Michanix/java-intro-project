@@ -1,4 +1,4 @@
-package components;
+package components.userinterface;
 
 /*
 * Main UI class. Here should be called every other UI component.
