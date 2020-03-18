@@ -3,10 +3,10 @@ package components.levels.firstlvl;
 import utils.DisplayText;
 import utils.ReadUserInput;
 
-public class LvLUI {
-    private DisplayText displayText;
-    private ReadUserInput readUserInput;
-    public LvLUI() {
+public class FirstLevel {
+    private DisplayText displayText = new DisplayText();
+    private ReadUserInput readUserInput = new ReadUserInput();
+    public FirstLevel() {
     }
 
     private void greeting() {
