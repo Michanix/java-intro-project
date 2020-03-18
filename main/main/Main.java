@@ -1,12 +1,9 @@
 package main;
 
-import utils.DisplayText;
 import components.userinterface.UI;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        DisplayText displayText = new DisplayText("src/main/text/lvl1/forward/goddessOfModestyAndGold.txt");
-        displayText.printText();
+    public static void main(String[] args) {
         UI ui = new UI();
         ui.run();
     }
