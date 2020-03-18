@@ -2,6 +2,7 @@ package components.levels.firstlvl;
 
 import entities.Summoner;
 
+import static components.actions.Terminate.terminate;
 import static components.actions.ThrowDiceAction.roll2D10;
 import static utils.DisplayText.printText;
 
@@ -17,11 +18,13 @@ public class LeftTurn {
         if (percent < 30) {
             // Player dies
             printText("src/main/text/lvl1/left/lessThanNPercent.txt");
+            summoner.setState(false);
         } else {
             // Player survives
             printText("src/main/text/lvl1/left/moreThanNPercent.txt");
         }
     }
+
 
     public void run() {
         leftChoice();

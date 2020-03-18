@@ -17,6 +17,7 @@ public class FirstLevel {
     }
 
     private void choice() {
+        //noinspection InfiniteLoopStatement
         while (true) {
             System.out.println("You are on the crossroad. Do you want to go left, right or forward?");
             System.out.print("> ");

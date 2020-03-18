@@ -4,25 +4,16 @@ package components.userinterface;
 * Main UI class. Here should be called every other UI component.
 */
 
-import components.actions.DisplaySummonerStats;
 import entities.Summoner;
 import utils.ReadUserInput;
 
+import static components.actions.DisplayStaticTextActions.displayGreeting;
+import static components.actions.DisplayStaticTextActions.displayTitle;
 import static components.actions.DisplaySummonerStats.displaySummonerCurrentStats;
-import static components.actions.DisplaySummonerStats.displaySummonerInitStats;
+import static components.actions.Terminate.terminate;
 
 public class UI {
     ReadUserInput readUserInput = new ReadUserInput();
-
-    private void greeting() {
-        System.out.println("=== Welcome To the Dungeons and Dragons ===");
-    }
-
-    private void displayTitle() {
-        System.out.println("===================");
-        System.out.println("===Choose action===");
-        System.out.println("===================");
-    }
 
     private Summoner displayCreateSummonerUI() {
         Summoner summoner;
@@ -39,6 +30,8 @@ public class UI {
         // later used this summoner to pass around other components, lol
         // send help...
         Summoner summoner = displayCreateSummonerUI();
+        // to keep IDE quiet, lol
+        //noinspection InfiniteLoopStatement
         while (true) {
             System.out.println();
             System.out.println("[1] Start the game");
@@ -55,7 +48,6 @@ public class UI {
                     displaySummonerCurrentStats(summoner);
                     break;
                 case "3":
-                    System.out.println("See you on the next adventure!");
                     terminate();
                     break;
                 default:
@@ -64,12 +56,8 @@ public class UI {
         }
     }
 
-    private void terminate() {
-        System.exit(0);
-    }
-
     public void run() {
-        greeting();
+        displayGreeting();
         main();
     }
 }
