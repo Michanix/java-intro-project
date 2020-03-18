@@ -4,8 +4,10 @@ package components;
 * Main UI class. Here should be called every other UI component.
 */
 
+import utils.ReadUserInput;
+
 public class UI {
-    ReadInput readInput = new ReadInput();
+    ReadUserInput readUserInput = new ReadUserInput();
 
     private void greeting() {
         System.out.println("=== Welcome To the Dungeons and Dragons ===");
@@ -24,7 +26,7 @@ public class UI {
             System.out.println("[2] Start the game");
             System.out.println("[3] Exit");
             System.out.print("> ");
-            String option = readInput.getUserInput();
+            String option = readUserInput.getUserInput();
             switch (option) {
                 case "1":
                     CreateSummonerUI createSummonerUI = new CreateSummonerUI();

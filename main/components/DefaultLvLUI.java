@@ -4,5 +4,6 @@ package components;
 */
 
 
-public class LvlUI {
+public class DefaultLvLUI {
+
 }

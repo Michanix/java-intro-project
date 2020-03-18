@@ -2,10 +2,10 @@ package components;
 
 import entities.Summoner;
 import utils.GameRace;
+import utils.ReadUserInput;
 
 public class CreateSummonerUI {
-    private String name;
-    private ReadInput userInput = new ReadInput();
+    private ReadUserInput userInput = new ReadUserInput();
 
     private void createSummoner() {
         System.out.println("How shall we call you, summoner?");

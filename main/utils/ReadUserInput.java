@@ -1,4 +1,4 @@
-package components;
+package utils;
 /*
 * Use this class to work with any kinds of user input
 * If some functionality missing to handle user input
