@@ -29,11 +29,11 @@ public class Abilities {
     // generate random value for an ability
     // by rolling 6-sided dice 4 times
     public int generateRndAbilityVal() {
-        int d6 =  DiceType.valueOf("D6").sides();
+        int d20 =  DiceType.valueOf("D20").sides();
         int[] vals = new int[4];
 
         for (int i = 0; i < 4; i++) {
-            int x = (int) (Math.random() * d6 + 1);
+            int x = (int) (Math.random() * d20 + 1);
             vals[i] = x;
         }
         Arrays.sort(vals);
