@@ -1,11 +1,16 @@
 package components.levels.firstlvl;
 
+import components.actions.ThrowDice;
+import components.userinterface.DefaultLvLUI;
+import entities.Dice;
 import utils.DisplayText;
 import utils.ReadUserInput;
 
 public class FirstLevel {
     private DisplayText displayText = new DisplayText();
     private ReadUserInput readUserInput = new ReadUserInput();
+    private DefaultLvLUI defaultLvLUI = new DefaultLvLUI();
+
     public FirstLevel() {
     }
 
@@ -21,9 +26,10 @@ public class FirstLevel {
             String choice = readUserInput.getUserInput();
             switch (choice) {
                 case "right":
-                    rightChose();
+                    rightChoise();
                     break;
                 case "left":
+                    leftChoice();
                     break;
                 case "forward":
                     break;
@@ -35,9 +41,17 @@ public class FirstLevel {
 
     }
 
-    private void rightChose() {
+    private void rightChoise() {
         String pathToTxt = "src/main/text/lvl1/right/ancientArteFound.txt";
         displayText.printText(pathToTxt);
+    }
+
+    private void leftChoice() {
+        String dice = defaultLvLUI.displayDiceOptions();  // Returns dice choosen by player
+        Dice userDice = new Dice(dice);
+        ThrowDice throwDiceAcion = new ThrowDice();
+        int points = throwDiceAcion.rollTheDie(userDice);
+        System.out.println("You rolled " + points);
     }
 
     public void run() {
