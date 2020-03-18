@@ -2,7 +2,7 @@ package components.levels.firstlvl;
 
 /*
 * If hero didnt die in trap.
-* He finds this.
+* He finds this...
 * An empty class, lol
 * */
 

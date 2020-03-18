@@ -20,7 +20,7 @@ public class LeftTurn {
         if (percent < 30) {
             // Player dies
             printText("src/main/text/lvl1/left/lessThanNPercent.txt");
-            System.out.println("You are back in the main menu.");
+            System.out.println("***Your summoner died. You are back in the main menu***");
             summoner.setState(false);
         } else {
             // Player survives

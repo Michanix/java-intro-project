@@ -17,7 +17,9 @@ public class FirstLevel {
     }
 
     private void choice() {
-        //noinspection InfiniteLoopStatement
+        // whenever hero backs in the main menu,
+        // he is being recovered from adventure
+        summoner.setState(true);
         while (summoner.isState()) {
             System.out.println("You are on the crossroad. Do you want to go left, right or forward?");
             System.out.print("> ");
