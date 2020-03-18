@@ -16,6 +16,7 @@ public class LeftTurn {
 
     private void leftChoice() {
         int percent = roll2D10();   // throws 2 D10 dices
+        System.out.println("It's a trap! (you roll for dexterity. Need more than 30% to dodge it!");
         System.out.println("You got " + percent + "%");
         if (percent < 30) {
             // Player dies

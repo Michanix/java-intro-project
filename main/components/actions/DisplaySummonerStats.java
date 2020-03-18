@@ -3,11 +3,6 @@ package components.actions;
 import entities.Summoner;
 
 public class DisplaySummonerStats {
-    private Summoner summoner;
-
-    public DisplaySummonerStats(Summoner summoner) {
-        this.summoner = summoner;
-    }
 
     public static void displaySummonerInitStats(Summoner summoner) {
         System.out.println("Welcome to the Great Adventure, " + summoner.getName() + "!");

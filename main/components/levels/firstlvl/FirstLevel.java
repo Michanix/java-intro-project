@@ -16,12 +16,15 @@ public class FirstLevel {
                 "You come to the crossroads, where will you go?\n");
     }
 
-    private void choice() {
+    private void LvlMenu() {
         // whenever hero backs in the main menu,
         // he is being recovered from adventure
         summoner.setState(true);
         while (summoner.isState()) {
-            System.out.println("You are on the crossroad. Do you want to go left, right or forward?");
+            // checking whether lvl is still going or not
+            // little hack to leave the adventure without terminating the game.
+            boolean lvlState = true;
+            System.out.println("You are on the crossroad. Do you want to go left, right or forward(Or type exit to left the adventure)?");
             System.out.print("> ");
             String choice = readUserInput.getUserInput();
             switch (choice) {
@@ -29,15 +32,19 @@ public class FirstLevel {
                     rightTurn();
                     break;
                 case "left":
-                    System.out.println("It's a trap! (you roll for dexterity)");
-                    System.out.println("(Need more than 30% to dodge it!)");
                     leftTurn();
                     break;
                 case "forward":
                     break;
+                case "exit":
+                    lvlState = false;
+                    break;
                 default:
                     System.err.println("Invalid option.");
                     break;
+            }
+            if (!lvlState) {
+                break;
             }
         }
     }
@@ -54,6 +61,6 @@ public class FirstLevel {
 
     public void run() {
         greeting();
-        choice();
+        LvlMenu();
     }
 }
