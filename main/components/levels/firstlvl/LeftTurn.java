@@ -1,13 +1,14 @@
 package components.levels.firstlvl;
 
 import entities.Summoner;
+import utils.ReadUserInput;
 
-import static components.actions.Terminate.terminate;
 import static components.actions.ThrowDiceAction.roll2D10;
 import static utils.DisplayText.printText;
 
 public class LeftTurn {
     private Summoner summoner;
+    private ReadUserInput readUserInput = new ReadUserInput();
 
     public LeftTurn(Summoner summoner) {
         this.summoner = summoner;
@@ -24,6 +25,13 @@ public class LeftTurn {
         } else {
             // Player survives
             printText("src/main/text/lvl1/left/moreThanNPercent.txt");
+            System.out.println("Do you check it out or you go back?(y/n)");
+            System.out.print("> ");
+            String answer = readUserInput.getUserInput();
+            if (answer.equals("y")) {
+                SecretPassage s = new SecretPassage();
+                s.findsItem();
+            }
         }
     }
 
