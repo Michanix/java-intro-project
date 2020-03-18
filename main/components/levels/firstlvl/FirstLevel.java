@@ -2,7 +2,6 @@ package components.levels.firstlvl;
 
 import components.actions.ThrowDiceAction;
 import components.userinterface.DefaultLvLUI;
-import entities.Dice;
 import utils.DisplayText;
 import utils.ReadUserInput;
 
@@ -30,6 +29,7 @@ public class FirstLevel {
                     break;
                 case "left":
                     System.out.println("It's a trap! (you roll for dexterity)");
+                    System.out.println("Need more than 30% to dodge it!");
                     leftChoice();
                     break;
                 case "forward":
@@ -44,18 +44,16 @@ public class FirstLevel {
 
     private void rightChoice() {
         String pathToTxt = "src/main/text/lvl1/right/ancientArteFound.txt";
-        System.out.println("=============================================");
         displayText.printText(pathToTxt);
-        System.out.println("=============================================");
     }
 
     private void leftChoice() {
         ThrowDiceAction throwDiceAction = new ThrowDiceAction();
         int percent = throwDiceAction.roll2D10();
         if (percent < 30) {
-            displayText.printText("src/main/text/lvl1/left/lessThan50.txt");
+            displayText.printText("src/main/text/lvl1/left/lessThanNPercent.txt");
         } else {
-            displayText.printText("src/main/text/lvl1/left/moreThan50.txt");
+            displayText.printText("src/main/text/lvl1/left/moreThanNPercent.txt");
         };
     }
 
