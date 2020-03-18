@@ -3,14 +3,10 @@ package utils;
 import java.util.List;
 
 public class DisplayText {
-    private List<String> listOfText;
 
-    public DisplayText(String path) throws Exception {
+    public void printText(String path) throws Exception {
         ReadTextFile readTextFile = new ReadTextFile();
-        this.listOfText = readTextFile.readFileToList(path);
-    }
-
-    public void printText() {
+        List<String> listOfText = readTextFile.readFileToList(path);
         for (String sentence: listOfText) {
             System.out.println(sentence);
         }
