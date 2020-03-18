@@ -1,6 +1,6 @@
 package components.levels.firstlvl;
 
-import components.actions.ThrowDice;
+import components.actions.ThrowDiceAction;
 import components.userinterface.DefaultLvLUI;
 import entities.Dice;
 import utils.DisplayText;
@@ -16,12 +16,12 @@ public class FirstLevel {
 
     private void greeting() {
         System.out.print("You are on the way of your first adventure.\n" +
-                "You come to the crossroads, where will you go? ");
+                "You come to the crossroads, where will you go?\n");
     }
 
     private void choice() {
         while (true) {
-            System.out.println("Do you want to go left, right or forward?");
+            System.out.println("You are on the crossroad. Do you want to go left, right or forward?");
             System.out.print("> ");
             String choice = readUserInput.getUserInput();
             switch (choice) {
@@ -43,14 +43,16 @@ public class FirstLevel {
 
     private void rightChoise() {
         String pathToTxt = "src/main/text/lvl1/right/ancientArteFound.txt";
+        System.out.println("=============================================");
         displayText.printText(pathToTxt);
+        System.out.println("=============================================");
     }
 
     private void leftChoice() {
-        String dice = defaultLvLUI.displayDiceOptions();  // Returns dice choosen by player
+        String dice = defaultLvLUI.displayAllDiceOptions();  // Returns dice choosen by player
         Dice userDice = new Dice(dice);
-        ThrowDice throwDiceAcion = new ThrowDice();
-        int points = throwDiceAcion.rollTheDie(userDice);
+        ThrowDiceAction throwDiceActionAcion = new ThrowDiceAction();
+        int points = throwDiceActionAcion.rollTheDie(userDice);
         System.out.println("You rolled " + points);
     }
 
