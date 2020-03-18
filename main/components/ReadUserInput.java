@@ -6,10 +6,10 @@ package components;
 * */
 import java.util.Scanner;
 
-public class ReadInput {
+public class ReadUserInput {
     private Scanner scanner;
 
-    public ReadInput() {
+    public ReadUserInput() {
         this.scanner = new Scanner(System.in);
     }
 
