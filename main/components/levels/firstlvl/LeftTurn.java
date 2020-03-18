@@ -14,10 +14,12 @@ public class LeftTurn {
     }
 
     private void leftChoice() {
-        int percent = roll2D10();       // throws 2 D10 dices
+        int percent = roll2D10();   // throws 2 D10 dices
+        System.out.println("You got " + percent + "%");
         if (percent < 30) {
             // Player dies
             printText("src/main/text/lvl1/left/lessThanNPercent.txt");
+            System.out.println("You are back in the main menu.");
             summoner.setState(false);
         } else {
             // Player survives

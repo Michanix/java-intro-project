@@ -25,7 +25,6 @@ public class UI {
 
     private void main() {
         // main controller of the game...sort of...
-        displayTitle();
         // returns created summoner by the Player
         // later used this summoner to pass around to other components, lol
         // send help...
@@ -35,7 +34,7 @@ public class UI {
         while (true) {
             System.out.println();
             System.out.println("[1] Start the game");
-            System.out.println("[2] Show character stats");
+            System.out.println("[2] Show current character stats");
             System.out.println("[3] Exit");
             System.out.print("> ");
             String option = readUserInput.getUserInput();

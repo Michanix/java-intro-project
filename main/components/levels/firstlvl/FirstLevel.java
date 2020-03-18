@@ -18,18 +18,18 @@ public class FirstLevel {
 
     private void choice() {
         //noinspection InfiniteLoopStatement
-        while (true) {
+        while (summoner.isState()) {
             System.out.println("You are on the crossroad. Do you want to go left, right or forward?");
             System.out.print("> ");
             String choice = readUserInput.getUserInput();
             switch (choice) {
                 case "right":
-                    rightChoice();
+                    rightTurn();
                     break;
                 case "left":
                     System.out.println("It's a trap! (you roll for dexterity)");
-                    System.out.println("Need more than 30% to dodge it!");
-                    leftChoice();
+                    System.out.println("(Need more than 30% to dodge it!)");
+                    leftTurn();
                     break;
                 case "forward":
                     break;
@@ -40,12 +40,12 @@ public class FirstLevel {
         }
     }
 
-    private void rightChoice() {
+    private void rightTurn() {
         RightTurn rightTurn = new RightTurn();
         rightTurn.run();
     }
 
-    private void leftChoice() {
+    private void leftTurn() {
         LeftTurn leftTurn = new LeftTurn(summoner);
         leftTurn.run();
     }
