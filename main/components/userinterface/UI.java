@@ -33,7 +33,8 @@ public class UI {
                     createSummonerUI.run();
                     break;
                 case "2":
-                    System.out.println("Incoming...");
+                    LvLsMenuUI lvLsMenuUI = new LvLsMenuUI();
+                    lvLsMenuUI.run();
                     break;
                 case "3":
                     System.out.println("See you on the next adventure!");
