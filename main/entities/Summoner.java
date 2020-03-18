@@ -10,12 +10,16 @@ import utils.GameRace;
 public class Summoner {
     private String name;
     private int experience;
+    private boolean state;          // Dead or Alive
     private GameRace race;
     private Abilities abilities;
+    private Weapon weapon;
+    private Armor armor;
 
     public Summoner(String name, GameRace race) {
         this.name = name;
         this.race = race;
+        this.state = true;
         this.abilities = new Abilities();
         this.experience = 0;
     }
@@ -37,6 +41,14 @@ public class Summoner {
         this.experience = experience;
     }
 
+    public boolean isState() {
+        return state;
+    }
+
+    public void setState(boolean state) {
+        this.state = state;
+    }
+
     public GameRace getRace() {
         return race;
     }
@@ -53,11 +65,29 @@ public class Summoner {
         this.abilities = abilities;
     }
 
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+    }
+
+    public Armor getArmor() {
+        return armor;
+    }
+
+    public void setArmor(Armor armor) {
+        this.armor = armor;
+    }
+
     @Override
     public String toString() {
-        return "Character{" +
+        return "Summoner{" +
                 "name='" + name + '\'' +
-                ", race='" + race + '\'' +
+                ", experience=" + experience +
+                ", state=" + state +
+                ", race=" + race +
                 ", abilities=" + abilities +
                 '}';
     }

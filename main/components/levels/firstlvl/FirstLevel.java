@@ -1,11 +1,14 @@
 package components.levels.firstlvl;
 
+import entities.Summoner;
 import utils.ReadUserInput;
 
 public class FirstLevel {
     private ReadUserInput readUserInput = new ReadUserInput();
+    private Summoner summoner;
 
-    public FirstLevel() {
+    public FirstLevel(Summoner summoner) {
+        this.summoner = summoner;
     }
 
     private void greeting() {
@@ -42,7 +45,7 @@ public class FirstLevel {
     }
 
     private void leftChoice() {
-        LeftTurn leftTurn = new LeftTurn();
+        LeftTurn leftTurn = new LeftTurn(summoner);
         leftTurn.run();
     }
 

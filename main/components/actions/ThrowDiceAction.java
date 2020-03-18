@@ -7,11 +7,11 @@ import utils.DiceType;
 
 public class ThrowDiceAction {
 
-    public int rollTheDie(int numberOfSides) {
+    public static int rollTheDie(int numberOfSides) {
         return (int) (Math.random() * numberOfSides);
     }
 
-    public int roll2D10() {
+    public static int roll2D10() {
         // method to calculate the outcome of the n dices rolled percentile vice
         // eg. Usually rolled 2 D10 -> First D10 shows 7 and Second 1
         // based on that the overall percantage calculated -> 71%

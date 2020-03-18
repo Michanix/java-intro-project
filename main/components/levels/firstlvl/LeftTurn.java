@@ -1,19 +1,26 @@
 package components.levels.firstlvl;
 
-import components.actions.ThrowDiceAction;
+import entities.Summoner;
 
+import static components.actions.ThrowDiceAction.roll2D10;
 import static utils.DisplayText.printText;
 
 public class LeftTurn {
+    private Summoner summoner;
+
+    public LeftTurn(Summoner summoner) {
+        this.summoner = summoner;
+    }
 
     private void leftChoice() {
-        ThrowDiceAction throwDiceAction = new ThrowDiceAction();
-        int percent = throwDiceAction.roll2D10();
+        int percent = roll2D10();       // throws 2 D10 dices
         if (percent < 30) {
+            // Player dies
             printText("src/main/text/lvl1/left/lessThanNPercent.txt");
         } else {
+            // Player survives
             printText("src/main/text/lvl1/left/moreThanNPercent.txt");
-        };
+        }
     }
 
     public void run() {

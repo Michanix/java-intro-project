@@ -4,10 +4,12 @@ import entities.Summoner;
 import utils.GameRace;
 import utils.ReadUserInput;
 
+import static components.actions.DisplaySummonerStats.displaySummonerInitStats;
+
 public class CreateSummonerUI {
     private ReadUserInput userInput = new ReadUserInput();
 
-    private void createSummoner() {
+    public Summoner createSummoner() {
         System.out.println("How shall we call you, summoner?");
         System.out.print("> ");
         String name = userInput.getUserInput();
@@ -15,7 +17,7 @@ public class CreateSummonerUI {
         System.out.println("What is your race? ");
         while (race == null) {
             System.out.println();
-            raceOptions();
+            displayRaceOptions();
             String option = userInput.getUserInput();
             switch (option) {
                 default:
@@ -36,21 +38,15 @@ public class CreateSummonerUI {
             }
         }
         Summoner newSummoner = new Summoner(name, race);
-        System.out.println("Welcome to the Great Adventure, " + name + "!");
-        System.out.println("Your game race: " + race.getRaceName());
-        System.out.println("You initial abilities: ");
-        System.out.println(newSummoner.getAbilities());
+        displaySummonerInitStats(newSummoner);
+        return newSummoner;
     }
 
-    private void raceOptions() {
+    private void displayRaceOptions() {
         System.out.println("[1] Elf");
         System.out.println("[2] Mountain Dwarf");
         System.out.println("[3] Human");
         System.out.println("[4] High elf");
         System.out.print("> ");
-    }
-
-    public void run() {
-        createSummoner();
     }
 }

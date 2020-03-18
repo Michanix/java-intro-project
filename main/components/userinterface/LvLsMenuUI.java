@@ -6,10 +6,16 @@ package components.userinterface;
 */
 
 import components.levels.firstlvl.FirstLevel;
+import entities.Summoner;
 import utils.ReadUserInput;
 
 public class LvLsMenuUI {
     private ReadUserInput userInput = new ReadUserInput();
+    private Summoner summoner;
+
+    public LvLsMenuUI(Summoner summoner) {
+        this.summoner = summoner;
+    }
 
     private void displayOptions() {
         while (true) {
@@ -21,7 +27,7 @@ public class LvLsMenuUI {
             String option = userInput.getUserInput();
             switch (option) {
                 case "1":
-                    FirstLevel firstLevel = new FirstLevel();
+                    FirstLevel firstLevel = new FirstLevel(summoner);
                     firstLevel.run();
                     break;
                 case "2":
