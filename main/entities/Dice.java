@@ -10,10 +10,6 @@ public class Dice {
         this.name = name;
         this.numberOfSides = setNumberOfSides(name);
     }
-    // Action methods
-    public int rollTheDie() {
-        return (int) (Math.random() * numberOfSides + 1);
-    }
     // getters, setters
     public String getName() {
         return name;
