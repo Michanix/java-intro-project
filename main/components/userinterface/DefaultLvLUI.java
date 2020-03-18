@@ -19,5 +19,14 @@ public class DefaultLvLUI {
         return dice;
     }
 
+    public String chooseAction() {
+        System.out.println();
+        System.out.println("[1] Roll 2D10");
+        System.out.println("[2] Exit");
+        System.out.print("> ");
+        String action = readUserInput.getUserInput();
+        return action;
+    }
+
 
 }
