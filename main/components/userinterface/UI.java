@@ -15,7 +15,7 @@ import static components.actions.Terminate.terminate;
 public class UI {
     ReadUserInput readUserInput = new ReadUserInput();
 
-    private Summoner displayCreateSummonerUI() {
+    private Summoner displayCreateSummoner() {
         Summoner summoner;
         System.out.println("====Create character====");
         CreateSummonerUI createSummonerUI = new CreateSummonerUI();
@@ -27,9 +27,9 @@ public class UI {
         // main controller of the game...sort of...
         displayTitle();
         // returns created summoner by the Player
-        // later used this summoner to pass around other components, lol
+        // later used this summoner to pass around to other components, lol
         // send help...
-        Summoner summoner = displayCreateSummonerUI();
+        Summoner summoner = displayCreateSummoner();
         // to keep IDE quiet, lol
         //noinspection InfiniteLoopStatement
         while (true) {

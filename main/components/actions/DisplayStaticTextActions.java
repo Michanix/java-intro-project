@@ -1,8 +1,9 @@
 package components.actions;
 
 /*
-* Class to store function to display static text like greetings, titles etc
-* */
+* Class to store functions to display general text like greetings, titles used in the game.
+* Dont store stuff specific to lvls.
+*/
 
 public class DisplayStaticTextActions {
 
