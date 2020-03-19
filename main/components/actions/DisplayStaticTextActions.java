@@ -5,6 +5,8 @@ package components.actions;
 * Dont store stuff specific to lvls.
 */
 
+import static utils.DisplayText.printText;
+
 public class DisplayStaticTextActions {
 
     public static void displayGreeting() {
@@ -20,4 +22,7 @@ public class DisplayStaticTextActions {
     public static void deathMessage() {
         System.out.println("You died and returned to the main menu.");
     }
+
+    public static void victoryMessage() {
+        printText("src/main/text/lvl1/forward/ifBeastSlayed.txt"); }
 }

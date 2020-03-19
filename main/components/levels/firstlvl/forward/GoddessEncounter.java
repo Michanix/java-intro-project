@@ -32,6 +32,9 @@ public class GoddessEncounter {
                 summoner.setState(false);
             } else {
                 printText("src/main/text/lvl1/forward/moreThan60(D20).txt");
+                printText("src/main/text/lvl1/forward/beastOutOfBush.txt");
+                EncounterBeast encounterBeast = new EncounterBeast(summoner);
+                encounterBeast.run();
             }
         }
     }

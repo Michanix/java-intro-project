@@ -19,6 +19,7 @@ public class FirstLevel {
     private void LvlMenu() {
         // whenever hero backs in the main menu,
         // he is being recovered from adventure
+        // and he is loosing all his equipment
         summoner.setState(true);
         while (summoner.isState()) {
             // checking whether lvl is still going or not
@@ -35,6 +36,7 @@ public class FirstLevel {
                     break;
                 case "3":
                     moveForward();
+                    lvlState = false;
                     break;
                 case "4":
                     displaySummonerCurrentStats(summoner);
@@ -69,7 +71,6 @@ public class FirstLevel {
     }
 
     private void rightTurn() {
-        System.out.println(summoner);
         RightTurn rightTurn = new RightTurn(summoner);
         rightTurn.run();
     }

@@ -6,7 +6,7 @@ package components.actions;
 
 public class Terminate {
     public static void terminate() {
-        System.out.println("See you on the next adventure!");
+        System.out.println("It was fun knowing you, hope to see you again!");
         System.exit(0);
     }
 }
