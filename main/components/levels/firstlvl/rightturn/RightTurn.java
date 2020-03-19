@@ -12,11 +12,11 @@ public class RightTurn {
     }
 
     public void run() {
-        String pathToTxt = "src/main/text/lvl1/right/ancientArteFound.txt";
         if (summoner.isWeapon()) {
             System.out.println("You aready been here.");
         } else {
             summoner.setWeapon(true);
+            String pathToTxt = "src/main/text/lvl1/right/ancientArteFound.txt";
             printText(pathToTxt);
         }
 

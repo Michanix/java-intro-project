@@ -19,11 +19,7 @@ public class LvLsMenuUI {
 
     private void displayOptions() {
         while (true) {
-            System.out.println();
-            System.out.println("[1] First level");
-            System.out.println("[2] Second level(Coming soon...)");
-            System.out.println("[3] Go back");
-            System.out.print("> ");
+            listOptions();
             String option = userInput.getUserInput();
             switch (option) {
                 case "1":
@@ -41,6 +37,14 @@ public class LvLsMenuUI {
             }
             break;
         }
+    }
+
+    private void listOptions() {
+        System.out.println();
+        System.out.println("[1] First level");
+        System.out.println("[2] Second level(Coming soon...)");
+        System.out.println("[3] Go back");
+        System.out.print("> ");
     }
 
     public void run() {

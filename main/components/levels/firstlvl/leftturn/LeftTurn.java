@@ -3,6 +3,7 @@ package components.levels.firstlvl.leftturn;
 import entities.Summoner;
 import utils.ReadUserInput;
 
+import static components.actions.DisplayStaticTextActions.deathMessage;
 import static components.actions.ThrowDiceAction.roll2D10;
 import static utils.DisplayText.printText;
 
@@ -20,12 +21,14 @@ public class LeftTurn {
         System.out.println("You got " + percent + "%");
         if (percent < 30) {
             // Player dies
-            printText("src/main/text/lvl1/left/lessThanNPercent.txt");
-            System.out.println("***Your summoner died. You are back in the main menu***");
+            String pathToText = "src/main/text/lvl1/left/lessThanNPercent.txt";
+            printText(pathToText);
+            deathMessage();
             summoner.setState(false);
         } else {
             // Player survives
-            printText("src/main/text/lvl1/left/moreThanNPercent.txt");
+            String pathToText = "src/main/text/lvl1/left/moreThanNPercent.txt";
+            printText(pathToText);
             System.out.println("Do you check it out or you go back?(y/n)");
             System.out.print("> ");
             String answer = readUserInput.getUserInput();

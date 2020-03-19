@@ -1,5 +1,6 @@
 package components.levels.firstlvl;
 
+import components.levels.firstlvl.forward.Forward;
 import components.levels.firstlvl.leftturn.LeftTurn;
 import components.levels.firstlvl.rightturn.RightTurn;
 import entities.Summoner;
@@ -33,6 +34,7 @@ public class FirstLevel {
                     leftTurn();
                     break;
                 case "3":
+                    moveForward();
                     break;
                 case "4":
                     displaySummonerCurrentStats(summoner);
@@ -67,6 +69,7 @@ public class FirstLevel {
     }
 
     private void rightTurn() {
+        System.out.println(summoner);
         RightTurn rightTurn = new RightTurn(summoner);
         rightTurn.run();
     }
@@ -74,6 +77,11 @@ public class FirstLevel {
     private void leftTurn() {
         LeftTurn leftTurn = new LeftTurn(summoner);
         leftTurn.run();
+    }
+
+    private void moveForward() {
+        Forward forward = new Forward(summoner);
+        forward.run();
     }
 
     public void run() {

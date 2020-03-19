@@ -12,7 +12,7 @@ import static components.actions.DisplayStaticTextActions.displayTitle;
 import static components.actions.DisplaySummonerStats.displaySummonerCurrentStats;
 import static components.actions.Terminate.terminate;
 
-public class UI {
+public class MainMenuUI {
     ReadUserInput readUserInput = new ReadUserInput();
 
     private Summoner displayCreateSummoner() {

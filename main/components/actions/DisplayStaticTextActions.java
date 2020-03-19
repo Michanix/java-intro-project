@@ -16,4 +16,8 @@ public class DisplayStaticTextActions {
         System.out.println("===Choose action===");
         System.out.println("===================");
     }
+
+    public static void deathMessage() {
+        System.out.println("You died and returned to the main menu.");
+    }
 }
