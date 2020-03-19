@@ -4,7 +4,7 @@ import entities.Summoner;
 import utils.GameRace;
 import utils.ReadUserInput;
 
-import static components.actions.DisplaySummonerStats.displaySummonerInitStats;
+import static components.actions.DisplaySummonerStats.displaySummonerCurrentStats;
 
 public class CreateSummonerUI {
     private ReadUserInput userInput = new ReadUserInput();
@@ -38,7 +38,7 @@ public class CreateSummonerUI {
             }
         }
         Summoner newSummoner = new Summoner(name, race);
-        displaySummonerInitStats(newSummoner);
+        displaySummonerCurrentStats(newSummoner);
         return newSummoner;
     }
 

@@ -13,8 +13,8 @@ public class Summoner {
     private boolean state;          // Dead or Alive
     private GameRace race;
     private Abilities abilities;
-    private Weapon weapon;         // coming soon...
-    private Armor armor;           // coming soon...
+    private boolean weapon;         // coming soon...
+    private boolean armor;           // coming soon...
 
     public Summoner(String name, GameRace race) {
         this.name = name;
@@ -65,19 +65,19 @@ public class Summoner {
         this.abilities = abilities;
     }
 
-    public Weapon getWeapon() {
+    public boolean isWeapon() {
         return weapon;
     }
 
-    public void setWeapon(Weapon weapon) {
+    public void setWeapon(boolean weapon) {
         this.weapon = weapon;
     }
 
-    public Armor getArmor() {
+    public boolean isArmor() {
         return armor;
     }
 
-    public void setArmor(Armor armor) {
+    public void setArmor(boolean armor) {
         this.armor = armor;
     }
 

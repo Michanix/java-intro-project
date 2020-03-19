@@ -24,7 +24,8 @@ public class FirstLevel {
             // checking whether lvl is still going or not
             // little hack to leave the adventure without terminating the game.
             boolean lvlState = true;
-            System.out.println("You are on the crossroad. Do you want to go left, right or forward(Or type exit to left the adventure)?");
+            System.out.println("You are on the crossroad. " +
+                    "Do you want to go left, right or forward(Or type exit to left the adventure)?");
             System.out.print("> ");
             String choice = readUserInput.getUserInput();
             switch (choice) {
@@ -50,7 +51,7 @@ public class FirstLevel {
     }
 
     private void rightTurn() {
-        RightTurn rightTurn = new RightTurn();
+        RightTurn rightTurn = new RightTurn(summoner);
         rightTurn.run();
     }
 
