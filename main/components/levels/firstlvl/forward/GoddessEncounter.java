@@ -1,9 +1,11 @@
 package components.levels.firstlvl.forward;
 
+/*
+* Class for encountering Godess.
+* */
+
 import entities.Summoner;
 import utils.ReadUserInput;
-
-import java.util.concurrent.TimeUnit;
 
 import static components.actions.DisplayStaticTextActions.deathMessage;
 import static components.actions.ThrowDiceAction.roll2D10;
@@ -22,11 +24,12 @@ public class GoddessEncounter {
         printText(pathToText);
         String choice = getChoice();
         if (choice.equals("1")) {
-            System.out.println("Back to the village");
+            System.out.println("You went back to the crossroad...");
         } else if (choice.equals("2")) {
             System.out.println("You are rolling the dice....");
-            int result = roll2D10();
-            if (result < 60) {
+            int percent = roll2D10();
+            System.out.println("You got " + percent + "%");
+            if (percent < 10) {
                 printText("src/main/text/lvl1/forward/lessThan60(D20).txt");
                 deathMessage();
                 summoner.setState(false);
@@ -47,8 +50,6 @@ public class GoddessEncounter {
         String choice = readUserInput.getUserInput();
         return choice;
     }
-
-
 
     public void run() {encounterGoddess();}
 }

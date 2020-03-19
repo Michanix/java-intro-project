@@ -13,7 +13,7 @@ public class RightTurn {
 
     public void run() {
         if (summoner.isWeapon()) {
-            System.out.println("You aready been here.");
+            System.out.println("You aready been here. Back to the crossroad...");
         } else {
             summoner.setWeapon(true);
             String pathToTxt = "src/main/text/lvl1/right/ancientArteFound.txt";

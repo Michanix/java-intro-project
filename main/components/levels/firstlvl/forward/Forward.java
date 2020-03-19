@@ -1,5 +1,6 @@
 package components.levels.firstlvl.forward;
 
+import components.levels.firstlvl.FirstLevel;
 import entities.Summoner;
 import utils.ReadUserInput;
 
@@ -17,22 +18,15 @@ public class Forward {
     }
 
     private void moveForward() {
-
-        while (summoner.isState()) {
-            printText("src/main/text/lvl1/forward/moveForward1.txt");
-            String choice = getChoice();
-            if (choice.equals("y")) {
-                // help villagers
-                printText("src/main/text/lvl1/forward/slayTheBeastOpt.txt");
-                helpVillage();
-                break;
-            } else if (choice.equals("n")) {
-                // move somewhere else
-                movePassVillage();
-                break;
-            } else {
-                System.err.println("Invalid option.");
-            }
+        printText("src/main/text/lvl1/forward/moveForward1.txt");
+        String choice = getChoice();
+        if (choice.equals("y")) {
+            printText("src/main/text/lvl1/forward/slayTheBeastOpt.txt");
+            helpVillage();
+        } else if(choice.equals("n")) {
+            movePassVillage();
+        } else {
+            System.err.println("Invalid option.");
         }
     }
 

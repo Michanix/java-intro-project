@@ -20,11 +20,10 @@ public class SecretPassage {
 
     public void findsItem() {
         if (summoner.isArmor()) {
-            System.out.println("You already been here.");
+            System.out.println("You already been here. Back to the crossroad...");
         } else {
             printText("src/main/text/lvl1/left/armorFound.txt");
             summoner.setArmor(true);
         }
-
     }
 }

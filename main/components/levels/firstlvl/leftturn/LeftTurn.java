@@ -38,10 +38,7 @@ public class LeftTurn {
             }
         }
     }
-
-
     public void run() {
         leftChoice();
     }
-
 }

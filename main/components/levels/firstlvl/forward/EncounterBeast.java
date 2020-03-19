@@ -21,6 +21,8 @@ public class EncounterBeast {
         // last parameter take in percentage number to control against the Summoner luck
         printText(equipStateTxt);
         int roll = roll2D10();
+        System.out.println("You are rolling the dice....");
+        System.out.println("You got " + roll + "%");
         if (roll < percent) {
             printText(ifDiesTxt);
             deathMessage();
@@ -55,7 +57,7 @@ public class EncounterBeast {
         } else {
             fightControllerHelper(
                     "src/main/text/lvl1/forward/fullEquip.txt",
-                    "src/main/text/lvl1/forward/lesstThan20.txt",
+                    "src/main/text/lvl1/forward/lessThan20.txt",
                     "src/main/text/lvl1/forward/moreThan20.txt",
                     20
             );

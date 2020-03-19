@@ -27,7 +27,7 @@ public class LvLsMenuUI {
                     firstLevel.run();
                     break;
                 case "2":
-                    System.err.println("Lvl underdevelopment.");
+                    System.err.println("Lvl in development...");
                     break;
                 case "3":
                     break;
