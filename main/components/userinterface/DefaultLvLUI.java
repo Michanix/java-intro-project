@@ -1,6 +1,7 @@
 package components.userinterface;
 /*
 * Some default User Interface for Each lvl.
+* Kinda useless for now. But if anything, its here
 */
 
 

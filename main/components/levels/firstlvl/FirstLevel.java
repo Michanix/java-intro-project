@@ -11,11 +11,9 @@ import static components.actions.DisplaySummonerStats.displaySummonerCurrentStat
 public class FirstLevel {
     private ReadUserInput readUserInput = new ReadUserInput();
     private Summoner summoner;
-    private boolean passed;
 
     public FirstLevel(Summoner summoner) {
         this.summoner = summoner;
-        this.passed = false;
     }
 
     private void LvlMenu() {
@@ -23,12 +21,8 @@ public class FirstLevel {
         // he is being recovered from adventure
         // and he is loosing all his equipment
         summoner.setState(true);
-        while (!passed) {
-            // checking whether lvl is still going or not
-            // little hack to leave the adventure without terminating the game.
-            if (!summoner.isState()) {
-                break;
-            }
+        summoner.setOnTheRoad(true);
+        while (summoner.isState() && summoner.isOnTheRoad()) {
             listOfOptions();
             String choice = readUserInput.getUserInput();
             switch (choice) {
@@ -45,21 +39,13 @@ public class FirstLevel {
                     displaySummonerCurrentStats(summoner);
                     break;
                 case "5":
-                    passed = true;
+                    summoner.setOnTheRoad(false);
                     break;
                 default:
                     System.err.println("Invalid option.");
                     break;
             }
         }
-    }
-
-    public boolean isPassed() {
-        return passed;
-    }
-
-    public void setPassed(boolean passed) {
-        this.passed = passed;
     }
 
     private void greeting() {

@@ -1,12 +1,8 @@
 package components.levels.firstlvl.forward;
 
-import components.levels.firstlvl.FirstLevel;
 import entities.Summoner;
 import utils.ReadUserInput;
 
-import static components.actions.DisplayStaticTextActions.deathMessage;
-import static components.actions.DisplayStaticTextActions.victoryMessage;
-import static components.actions.ThrowDiceAction.roll2D10;
 import static utils.DisplayText.printText;
 
 public class Forward {

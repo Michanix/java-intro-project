@@ -18,25 +18,22 @@ public class LvLsMenuUI {
     }
 
     private void displayOptions() {
-        while (true) {
-            listOptions();
-            String option = userInput.getUserInput();
-            switch (option) {
-                case "1":
-                    FirstLevel firstLevel = new FirstLevel(summoner);
-                    firstLevel.run();
-                    break;
-                case "2":
-                    System.err.println("Lvl in development...");
-                    break;
-                case "3":
-                    break;
-                default:
-                    System.err.println("Invalid option. Please select option from the list!");
-                    break;
+        listOptions();
+        String option = userInput.getUserInput();
+        switch (option) {
+            case "1":
+                FirstLevel firstLevel = new FirstLevel(summoner);
+                firstLevel.run();
+                break;
+            case "2":
+                System.err.println("Lvl in development...");
+                break;
+            case "3":
+                break;
+            default:
+                System.err.println("Invalid option. Please select option from the list!");
+                break;
             }
-            break;
-        }
     }
 
     private void listOptions() {

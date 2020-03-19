@@ -11,10 +11,11 @@ public class Summoner {
     private String name;
     private int experience;
     private boolean state;          // Dead or Alive
+    private boolean onTheRoad;      // Dirty hack to check, if Summoner is stil in adventure
     private GameRace race;
     private Abilities abilities;
-    private boolean weapon;         // coming soon...
-    private boolean armor;           // coming soon...
+    private boolean weapon;         // coming soon...(Seperate class for Weapon)
+    private boolean armor;           // coming soon...(Seperate class for Armor)
 
     public Summoner(String name, GameRace race) {
         this.name = name;
@@ -47,6 +48,14 @@ public class Summoner {
 
     public void setState(boolean state) {
         this.state = state;
+    }
+
+    public boolean isOnTheRoad() {
+        return onTheRoad;
+    }
+
+    public void setOnTheRoad(boolean onTheRoad) {
+        this.onTheRoad = onTheRoad;
     }
 
     public String getRace() {
@@ -87,8 +96,11 @@ public class Summoner {
                 "name='" + name + '\'' +
                 ", experience=" + experience +
                 ", state=" + state +
+                ", onTheRoad=" + onTheRoad +
                 ", race=" + race +
                 ", abilities=" + abilities +
+                ", weapon=" + weapon +
+                ", armor=" + armor +
                 '}';
     }
 }

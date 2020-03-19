@@ -17,7 +17,7 @@ public class MainMenuUI {
 
     private Summoner displayCreateSummoner() {
         Summoner summoner;
-        System.out.println("====Create character====");
+        System.out.println("=====Create character=====");
         CreateSummonerUI createSummonerUI = new CreateSummonerUI();
         summoner = createSummonerUI.createSummoner();
         return summoner;
@@ -31,6 +31,7 @@ public class MainMenuUI {
         Summoner summoner = displayCreateSummoner();
         // to keep IDE quiet, lol
         //noinspection InfiniteLoopStatement
+        displayTitle();
         while (true) {
             System.out.println();
             System.out.println("[1] Start the game");

@@ -33,8 +33,8 @@ public class LeftTurn {
             System.out.print("> ");
             String answer = readUserInput.getUserInput();
             if (answer.equals("y")) {
-                SecretPassage s = new SecretPassage(summoner);
-                s.findsItem();
+                SecretPassage secretPassage = new SecretPassage(summoner);
+                secretPassage.findsItem();
             }
         }
     }

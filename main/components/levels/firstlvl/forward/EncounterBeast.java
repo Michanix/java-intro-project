@@ -9,7 +9,6 @@ import static utils.DisplayText.printText;
 
 public class EncounterBeast {
     private Summoner summoner;
-
     public EncounterBeast(Summoner summoner) {
         this.summoner = summoner;
     }
@@ -30,6 +29,7 @@ public class EncounterBeast {
         } else {
             printText(ifSurvivesTxt);
             victoryMessage();
+            summoner.setOnTheRoad(false);
         }
     }
 
