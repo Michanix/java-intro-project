@@ -10,8 +10,10 @@ public class DisplayText {
             System.out.println("=============================================");
             for (String sentence: listOfText) {
                 System.out.println(sentence);
+                Thread.sleep(600);          // play with this to change the speed of displaying msgs
             }
             System.out.println("=============================================");
+            Thread.sleep(500);
         } catch (Exception e) {
             e.printStackTrace();
         }
