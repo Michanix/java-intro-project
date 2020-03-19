@@ -1,4 +1,4 @@
-package components.levels.firstlvl;
+package components.levels.firstlvl.leftturn;
 
 import entities.Summoner;
 import utils.ReadUserInput;
@@ -30,7 +30,7 @@ public class LeftTurn {
             System.out.print("> ");
             String answer = readUserInput.getUserInput();
             if (answer.equals("y")) {
-                SecretPassage s = new SecretPassage();
+                SecretPassage s = new SecretPassage(summoner);
                 s.findsItem();
             }
         }

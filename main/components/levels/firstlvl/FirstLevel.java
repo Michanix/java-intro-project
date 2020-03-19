@@ -1,7 +1,11 @@
 package components.levels.firstlvl;
 
+import components.levels.firstlvl.leftturn.LeftTurn;
+import components.levels.firstlvl.rightturn.RightTurn;
 import entities.Summoner;
 import utils.ReadUserInput;
+
+import static components.actions.DisplaySummonerStats.displaySummonerCurrentStats;
 
 public class FirstLevel {
     private ReadUserInput readUserInput = new ReadUserInput();
@@ -9,11 +13,6 @@ public class FirstLevel {
 
     public FirstLevel(Summoner summoner) {
         this.summoner = summoner;
-    }
-
-    private void greeting() {
-        System.out.print("You are on the way of your first adventure.\n" +
-                "You come to the crossroads, where will you go?\n");
     }
 
     private void LvlMenu() {
@@ -24,20 +23,21 @@ public class FirstLevel {
             // checking whether lvl is still going or not
             // little hack to leave the adventure without terminating the game.
             boolean lvlState = true;
-            System.out.println("You are on the crossroad. " +
-                    "Do you want to go left, right or forward(Or type exit to left the adventure)?");
-            System.out.print("> ");
+            listOfOptions();
             String choice = readUserInput.getUserInput();
             switch (choice) {
-                case "right":
+                case "1":
                     rightTurn();
                     break;
-                case "left":
+                case "2":
                     leftTurn();
                     break;
-                case "forward":
+                case "3":
                     break;
-                case "exit":
+                case "4":
+                    displaySummonerCurrentStats(summoner);
+                    break;
+                case "5":
                     lvlState = false;
                     break;
                 default:
@@ -48,6 +48,22 @@ public class FirstLevel {
                 break;
             }
         }
+    }
+    private void greeting() {
+        System.out.print("You are on the way of your first adventure.\n" +
+                "You come to the crossroads, where will you go?\n");
+    }
+
+    private void listOfOptions() {
+        System.out.println();
+        System.out.println("You are on the crossroad. "
+                + "Do you want to go left, right or forward?");
+        System.out.println("[1] Go right");
+        System.out.println("[2] Go left");
+        System.out.println("[3] Go forward");
+        System.out.println("[4] Show current stats");
+        System.out.println("[5] Leave adventure");
+        System.out.print("> ");
     }
 
     private void rightTurn() {

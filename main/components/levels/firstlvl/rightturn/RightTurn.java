@@ -1,4 +1,4 @@
-package components.levels.firstlvl;
+package components.levels.firstlvl.rightturn;
 
 import entities.Summoner;
 
